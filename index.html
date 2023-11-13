@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function create() {
+        if (document.getElementById("pswd1").value ==
+            document.getElementById("pswd2").value && document.getElementById("first_name").value != "" && document.getElementById("last_name").value != "" && document.getElementById("email").value !="" && document.getElementById("phone_number").value !="") {
+            alert("Account created successfully!");
+        }
+        else {
+            alert("Please fill all the fields correctly!");
+        }
+
+    }
+    let passConfirm = function () {
+        if (document.getElementById("pswd1").value ==
+            document.getElementById("pswd2").value) {
+            if (document.getElementById("pswd2").value == "") {
+                document.getElementById("Message").style.color = "Red";
+                document.getElementById("Message").innerHTML = "Password is a required field!"
+            }
+            else {
+                document.getElementById("Message").style.color = "Green";
+                document.getElementById("Message").innerHTML = "Passwords match!"
+            }
+        } else {
+            document.getElementById("Message").style.color = "Red";
+            document.getElementById("Message").innerHTML = "Passwords do NOT match!"
+        }
+    }
+</script>
+
+<body>
+    <div class="left-container">
+        <!-- <div><img src="jwu-photographing-auroras-rs1.webp"></div> -->
+        <div class="logo">
+            <div class="odin"> </div>
+            <div class="caption">THE NORTHERN LIGHTS</div>
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="intro">
+            <div class="intro1">
+                This is not a real service! You know you need something like this in your life to help you realize your
+                deepest dreams. Sign up <i>now</i> to get started.
+            </div>
+            <div class="intro2">
+                You <i>know</i> you want to.
+            </div>
+        </div>
+        <div class="credentials">
+            <div class="content">
+                <h2>Let's do this!</h2>
+                <form action="#" method="get">
+                    <div class="left">
+                        <div class="inputs">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" name="first_name" id="first_name">
+                        </div>
+
+                        <div class="inputs">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="inputs">
+                            <label for="user_password">PASSWORD</label>
+                            <input type="password" id="pswd1" name="pswd1" onkeyup='passConfirm()' required>
+                        </div>
+                        <span id="Message"></span>
+                    </div>
+
+                    <div class="right">
+                        <div class="inputs">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" name="last_name" id="last_name">
+                        </div>
+
+                        <div class="inputs">
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="tel" id="phone_number" name="phone_number">
+                        </div>
+
+                        <div class="inputs">
+                            <label for="user_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="pswd2" name="pswd2" onkeyup='passConfirm()' required>
+                        </div>
+                    </div>
+
+                    <span id="Message"></span>
+
+                </form>
+            </div>
+
+        </div>
+        <div>
+            <button type="submit" onclick="create()">Create Account</button>
+        </div>
+        <h4>Already have an account?
+            <div class="login">Log in</div>
+        </h4>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+/* img {
+    max-width: 40%;
+    max-height: 50%;
+    text-align: left;
+    margin: -1%;
+    padding: 0%;
+} */
+@font-face {
+    font-family: customfont;
+    src: url("https://db.onlinewebfonts.com/t/a163d087c4bfdff182eb1b4fcc595798.woff2")format("woff2");
+
+}
+
+
+body {
+    margin: 0%;
+    display: flex;
+    font-family: customfont;
+}
+
+.odin {
+    width: 50px;
+    height: 50px;
+    background-image: url(odin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* padding-left: 60px;
+    padding-bottom: 10px; */
+}
+
+.left-container {
+    position: relative;
+    background-image: url(jwu-photographing-auroras-rs1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70vw;
+    height: 120vh;
+}
+
+
+
+.logo {
+    font-family: customfont;
+    font-weight: bolder;
+    position: absolute;
+    top: 150px;
+    background-color: rgba(68, 68, 75, 0.479);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.caption {
+    padding-top: 15px;
+}
+
+button {
+    background-color: #3a5a8d;
+    color: white;
+    border-radius: 8px;
+    border-color: #cad1de;
+    font-family: customfont;
+    border: none;
+    padding: 15px 10px;
+    width: 180px;
+    margin-left: 100px;
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.login {
+    color: #3a5a8d;
+    font-weight: bold;
+
+}
+
+.intro {
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    margin-top: 90px;
+    margin-left: 100px;
+    margin-right: 70px;
+}
+
+input {
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    padding-right: 80px;
+}
+
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: #E5E7EB;
+}
+
+input:focus {
+    border-color: blue;
+    box-shadow: 0px 2px 0px rgb(169, 172, 173);
+    outline: none;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    font-family: customfont;
+    font-size: 12px;
+    font-weight: bold;
+    gap: 2px;
+}
+
+form {
+    display: flex;
+    gap: 50px;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.credentials {
+    background-color: rgb(243, 243, 243);
+    box-shadow: 1px 1px 5px rgb(169, 172, 173);
+}
+
+.content {
+    margin-top: 40px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    margin-left: 100px;
+}
+
+h4 {
+    margin-left: 100px;
+    display: flex;
+    gap: 5px;
+}
